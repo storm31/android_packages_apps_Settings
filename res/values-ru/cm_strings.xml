@@ -833,7 +833,7 @@
     <string name="pref_disable_wallpaperservice_summary">Отключить службу обоев для уменьшения памяти, используемой SystemUI (требуется перезагрузка)</string>
 
     <string name="pref_is_high_end_gfx_title">Включить хай-энд графику</string>
-    <string name="pref_is_high_end_gfx_summary">Включение функии аппаратного ускорения прозрачности (требуется перезагрузка)</string>
+    <string name="pref_is_high_end_gfx_summary">Включение функции аппаратного ускорения прозрачности (требуется перезагрузка)</string>
 
     <string name="user_interface_title">Интерфейс пользователя</string>
     <string name="dual_pane_prefs_title">Двухпанельные настройки</string>
