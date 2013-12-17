@@ -167,7 +167,11 @@
         <item>Медленная</item>
         <item>Обычная</item>
         <item>Быстрая</item>
+        <item>Ещё быстрее</item>
         <item>Очень быстрая</item>
+        <item>Скоростная</item>
+        <item>Очень скоростная</item>
+        <item>Самая быстрая</item>
     </string-array>
     <!-- Do not translate. -->
     <string-array name="tts_rate_values">
@@ -176,6 +180,10 @@
         <item>100</item>
         <item>150</item>
         <item>200</item>
+        <item>250</item>
+        <item>300</item>
+        <item>350</item>
+        <item>400</item>
     </string-array>
 
     <!-- Default pitch choices -->
@@ -202,6 +210,7 @@
         <item>Dies ist ein Beispiel für Sprachsynthese in Deutsch.</item>
         <item>Questo è un esempio di sintesi vocale in italiano.</item>
         <item>Este es un ejemplo de síntesis de voz en español.</item>
+        <item>이것은 한국어 음성 합성의 예입니다.</item>
     </string-array>
     <string-array name="tts_demo_string_langs" translatable="false">
         <item>eng</item>
@@ -209,6 +218,7 @@
         <item>deu</item>
         <item>ita</item>
         <item>spa</item>
+        <item>kor</item>
     </string-array>
 
 
@@ -249,19 +259,19 @@
         <!-- Status message of Wi-Fi when it is idle. -->
         <item></item>
         <!-- Status message of Wi-Fi when it is scanning. -->
-        <item>Scanning\u2026</item>
+        <item>Сканирование\u2026</item>
         <!-- Status message of Wi-Fi when it is connecting to a network. -->
-    <item msgid="8937994881315223448">"Подключено к <xliff:g id="NETWORK_NAME">%1$s</xliff:g>"</item>
+    <item>Подключение к <xliff:g id="network_name">%1$s</xliff:g>\u2026</item>
         <!-- Status message of Wi-Fi when it is authenticating with a network. -->
-    <item msgid="7698638434317271902">"Отключение от <xliff:g id="NETWORK_NAME">%1$s</xliff:g>…"</item>
+    <item>Аутентификация на <xliff:g id="network_name">%1$s</xliff:g>\u2026</item>
         <!-- Status message of Wi-Fi when it is obtaining IP address from a network. -->
-    <item msgid="8578370891960825148">"Сбой"</item>
+    <item>Получение IP адреса от <xliff:g id="network_name">%1$s</xliff:g>\u2026</item>
         <!-- Status message of Wi-Fi when it is connected to a network. -->
-    <item msgid="1805837518286731242">"Временно избегать плохого соединения"</item>
+    <item>Подключено к <xliff:g id="network_name">%1$s</xliff:g></item>
         <!-- Status message of Wi-Fi when it is suspended. -->
         <item>Приостановлено</item>
         <!-- Status message of Wi-Fi when it is disconnecting from a network. -->
-    <!-- no translation found for wifi_security:2 (1532568756571457140) -->
+        <item>Отключение от <xliff:g id="network_name">%1$s</xliff:g>\u2026</item>
         <!-- Status message of Wi-Fi when it is disconnected. -->
         <item>Отключено</item>
         <!-- Status message of Wi-Fi when it is a failure. -->
@@ -298,12 +308,10 @@
 
    <!-- Wi-Fi AP settings.  The type of security a Wi-Fi AP supports. -->
    <!-- Note that adding/removing/moving the items will need wifi settings code change. -->
-    <string-array name="wifi_ap_security" translatable="false">
-        <item>Open</item>
-        <!-- Do not translate. -->
-        <item>WPA PSK</item>
-        <!-- Do not translate. -->
-        <item>WPA2 PSK</item>
+    <string-array name="wifi_ap_security">
+        <item>@string/wifi_security_none</item>
+        <item>@string/wifi_security_wpa</item>
+        <item>@string/wifi_security_wpa2</item>
     </string-array>
 
     <!-- Match this with the constants in WifiDialog. --> <skip />
@@ -333,11 +341,11 @@
     <!-- Match this with the order of WifiP2pDevice.Status -->
     <!-- Wi-Fi p2p settings device status message -->
   <string-array name="wifi_p2p_status">
-    <item>"Подключено"</item>
-    <item>"Приглашено"</item>
-    <item>"Сбой"</item>
-    <item>"Доступно"</item>
-    <item>"Вне диапазона"</item>
+    <item>Подключено</item>
+    <item>Приглашено</item>
+    <item>Сбой</item>
+    <item>Доступно</item>
+    <item>Вне диапазона</item>
    </string-array>
 
 
@@ -348,37 +356,37 @@
         <item>2 мин</item>
         <item>5 мин</item>
         <item>1 hour</item>
-        <item>Never time out</item>
+        <item>Не отключать</item>
     </string-array>
 
     <!-- Match this with drawable.wifi_signal. --> <skip />
     <!-- Wi-Fi settings. The signal strength a Wi-Fi network has. -->
   <string-array name="wifi_signal">
-    <item>"Слабый"</item>
-    <item>"Хороший"</item>
-    <item>"Хороший"</item>
-    <item>"Отличный"</item>
+    <item>Слабый</item>
+    <item>Хороший</item>
+    <item>Хороший</item>
+    <item>Отличный</item>
     </string-array>
 
     <!-- Wi-Fi settings. Presented as a list dialog to the user to choose the Wi-Fi sleep policy. -->
   <string-array name="wifi_sleep_policy_entries">
         <!-- Always keep Wi-Fi on when screen turns off. -->
-        <item>"Включено"</item>
+        <item>Включено</item>
         <!-- Keep Wi-Fi on when screen turns off and plugged in.  When on battery, go to sleep when screen turns off. -->
-        <item>"Только при питании от сети"</item>
+        <item>Только при питании от сети</item>
         <!-- Do not keep Wi-Fi on when screen turns off. -->
-        <item>"Отключено (экономит моб. трафик)"</item>
+        <item>Отключено (экономит моб. трафик)</item>
     </string-array>
 
     <!-- Wi-Fi settings. Presented as a list dialog to the user to choose the Wi-Fi sleep policy. Used when
          the device is Wi-Fi-only. [CHAR LIMIT=30] -->
   <string-array name="wifi_sleep_policy_entries_wifi_only">
         <!-- Always keep Wi-Fi on when screen turns off. -->
-        <item>"Включено"</item>
+        <item>Включено</item>
         <!-- Keep Wi-Fi on when screen turns off and plugged in.  When on battery, go to sleep when screen turns off. -->
-        <item>"Только при питании от сети"</item>
+        <item>Только при питании от сети</item>
         <!-- Do not keep Wi-Fi on when screen turns off, for Wi-Fi-only devices, no other data connection -->
-        <item>"Отключено"</item>
+        <item>Отключено</item>
     </string-array>
 
     <!-- Match with wifi_sleep_policy_entries and the values of the settings in Settings class. --> <skip />
@@ -416,9 +424,9 @@
 
     <!-- Display options for UsageStats class -->
   <string-array name="usage_stats_display_order_types">
-    <item>"Время использования"</item>
-    <item>"Подсчитать"</item>
-    <item>"Название приложения"</item>
+    <item>Время использования</item>
+    <item>Подсчитать</item>
+    <item>Название приложения</item>
     </string-array>
 
     <!-- EAP method -->
@@ -430,6 +438,13 @@
     </string-array>
 
     <!-- Phase 2 options -->
+    <string-array name="wifi_peap_phase2_entries">
+        <item>Нет</item>
+        <item>MSCHAPV2</item>
+        <item>GTC</item>
+    </string-array>
+
+    <!-- Phase 2 options for rest of EAP methods -->
   <string-array name="wifi_phase2_entries">
         <item>Нет</item>
         <item>PAP</item>
@@ -458,9 +473,9 @@
 
     <!-- Sound settings for emergency tone. -->
   <string-array name="emergency_tone_entries">
-    <item>"Выкл."</item>
-    <item>"Оповещение"</item>
-    <item>"Вибро"</item>
+    <item>Выкл.</item>
+    <item>Оповещение</item>
+    <item>Вибро</item>
     </string-array>
 
     <!-- Do not translate. -->
@@ -488,7 +503,7 @@
         <item>Нет</item>
         <item>PAP</item>
         <item>CHAP</item>
-        <item>PAP or CHAP</item>
+        <item>PAP или CHAP</item>
     </string-array>
 
     <string-array translatable="false" name="apn_auth_values">
@@ -535,10 +550,33 @@
     </string-array>
 
     <!-- Apps on SD instalaltion location options in ApplicationSettings -->
+    <string-array name="mvno_type_entries">
+        <!-- Do not translate. -->
+        <item>Нет</item>
+        <!-- Do not translate. -->
+        <item>SPN</item>
+        <!-- Do not translate. -->
+        <item>IMSI</item>
+        <!-- Do not translate. -->
+        <item>GID</item>
+    </string-array>
+
+    <string-array translatable="false" name="mvno_type_values">
+        <!-- Do not translate. -->
+        <item></item>
+        <!-- Do not translate. -->
+        <item>spn</item>
+        <!-- Do not translate. -->
+        <item>imsi</item>
+        <!-- Do not translate. -->
+        <item>gid</item>
+    </string-array>
+
+    <!-- Apps on SD installation location options in ApplicationSettings -->
   <string-array name="app_install_location_entries">
-    <item>"Внутренняя память устройства"</item>
-    <item>"Съемная SD-карта"</item>
-    <item>"На усмотрение системы"</item>
+    <item>Внутренняя память устройства</item>
+    <item>Съемная SD-карта</item>
+    <item>На усмотрение системы</item>
     </string-array>
 
     <!-- Do not translate. -->
@@ -549,13 +587,116 @@
     </string-array>
 
     <!-- Titles for the list of long press timeout options. -->
+    <string-array name="app_ops_categories">
+        <item>Местоположение</item>
+        <item>Личное</item>
+        <item>Сообщения</item>
+        <item>Проигрыватель</item>
+        <item>Устройство</item>
+    </string-array>
+
+    <!-- User display names for app ops codes -->
+    <string-array name="app_ops_summaries">
+        <item>грубое определение местоположения</item>
+        <item>точное определение местоположения</item>
+        <item>GPS</item>
+        <item>вибро</item>
+        <item>просмотреть контакты</item>
+        <item>изменить контакты</item>
+        <item>просмотреть журнал вызовов</item>
+        <item>изменить журнал вызовов</item>
+        <item>просмотреть календарь</item>
+        <item>изменить календарь</item>
+        <item>сканировать wi-fi сети</item>
+        <item>уведомление</item>
+        <item>сканировать сеть</item>
+        <item>сделать вызов</item>
+        <item>просмотреть SMS</item>
+        <item>написать SMS</item>
+        <item>получать SMS</item>
+        <item>получать срочные SMS</item>
+        <item>получать MMS</item>
+        <item>получать WAP уведомления</item>
+        <item>отправить SMS</item>
+        <item>просмотреть ICC SMS</item>
+        <item>написать ICC SMS</item>
+        <item>изменить настройки</item>
+        <item>переместить наверх</item>
+        <item>доступ к уведомлениям</item>
+        <item>камера</item>
+        <item>диктофон</item>
+        <item>воспроизведение</item>
+        <item>просмотреть папку обмена</item>
+        <item>изменить содержимое папки обмена</item>
+        <item>кнопки проигрывателя</item>
+        <item>аудио фокус</item>
+        <item>общая громкость</item>
+        <item>громкость телефона</item>
+        <item>громкость звонка</item>
+        <item>громкость медиа</item>
+        <item>громкость будильника</item>
+        <item>громкость уведомлений</item>
+        <item>громкость bluetooth</item>
+        <item>не отключать</item>
+        <item>отслеживать местоположение</item>
+        <item>monitor high power location</item>
+    </string-array>
+
+    <!-- User display names for app ops codes -->
+    <string-array name="app_ops_labels">
+        <item>Местоположение</item>
+        <item>Местоположение</item>
+        <item>Местоположение</item>
+        <item>Вибро</item>
+        <item>Просмотреть контакты</item>
+        <item>Изменить контакты</item>
+        <item>Просмотреть журнал вызовов</item>
+        <item>Изменить журнал вызовов</item>
+        <item>Просмотреть календарь</item>
+        <item>Изменить календарь</item>
+        <item>Местоположение</item>
+        <item>Отправить уведомление</item>
+        <item>Местоположение</item>
+        <item>Сделать вызов</item>
+        <item>Просмотреть SMS/MMS</item>
+        <item>Написать SMS/MMS</item>
+        <item>Получать SMS/MMS</item>
+        <item>Получать SMS/MMS</item>
+        <item>Получать SMS/MMS</item>
+        <item>Получать SMS/MMS</item>
+        <item>Отправить SMS/MMS</item>
+        <item>Просмотреть SMS/MMS</item>
+        <item>Написать SMS/MMS</item>
+        <item>Изменить настройки</item>
+        <item>Переместить наверх</item>
+        <item>Доступ к уведомлениям</item>
+        <item>Камера</item>
+        <item>Диктофон</item>
+        <item>Проигрыватель</item>
+        <item>Просмотреть содержимое папки обмена</item>
+        <item>Изменить содержимое папки обмена</item>
+        <item>Кнопки проигрывателя</item>
+        <item>Аудио фокус</item>
+        <item>Общая громкость</item>
+        <item>Громкость телефона</item>
+        <item>Громкость звонка</item>
+        <item>Громкость медиа</item>
+        <item>Громкость будильника</item>
+        <item>Громкость уведомлений</item>
+        <item>Громкость Bluetooth</item>
+        <item>Не отключать</item>
+        <item>Местоположение</item>
+        <item>Местоположение</item>
+    </string-array>
+
+    <!-- Titles for the list of long press timeout options. -->
     <string-array name="long_press_timeout_selector_titles">
         <!-- A title for the option for short long-press timeout [CHAR LIMIT=25] -->
-        <item>"Небольшая"</item>
+        <item>Небольшая</item>
         <!-- A title for the option for medium long-press timeout [CHAR LIMIT=25] -->        
-        <item>"Средняя"</item>
+        <item>Средняя</item>
         <!-- A title for the option for long long-press timeout [CHAR LIMIT=25] -->
-        <item>"Большая"</item>
+        <item>Большая</item>
     </string-array>
 
     <!-- Values for the list of long press timeout options. -->
@@ -566,10 +707,195 @@
     </string-array>
 
     <!-- Titles for HDCP checking preference. [CHAR LIMIT=35] -->
+    <string-array name="captioning_typeface_selector_titles">
+        <item>По умолчанию</item>
+        <item>Sans-serif</item>
+        <item>Sans-serif condensed</item>
+        <item>Serif</item>
+        <item>Monospace</item>
+    </string-array>
+
+    <!-- Values for captioning typeface preference. -->
+    <string-array name="captioning_typeface_selector_values" translatable="false" >
+        <item></item>
+        <item>sans-serif</item>
+        <item>sans-serif-condensed</item>
+        <item>serif</item>
+        <item>monospace</item>
+    </string-array>
+
+    <!-- Titles for captioning font size preference. [CHAR LIMIT=35] -->
+    <string-array name="captioning_font_size_selector_titles">
+        <item>Очень маленький</item>
+        <item>Маленький</item>
+        <item>Обычный</item>
+        <item>Большой</item>
+        <item>Очень большой</item>
+    </string-array>
+
+    <!-- Values for captioning font size preference. -->
+    <string-array name="captioning_font_size_selector_values" translatable="false" >
+        <item>0.25</item>
+        <item>0.5</item>
+        <item>1.0</item>
+        <item>1.5</item>
+        <item>2.0</item>
+    </string-array>
+
+    <!-- Titles for captioning character edge type preference. [CHAR LIMIT=35] -->
+    <string-array name="captioning_edge_type_selector_titles">
+        <item>Нет</item>
+        <item>Контур</item>
+        <item>Тень</item>
+    </string-array>
+
+    <!-- Values for captioning character edge type preference. -->
+    <integer-array name="captioning_edge_type_selector_values" translatable="false" >
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </integer-array>
+
+    <!-- Titles for captioning color preference. -->
+    <string-array name="captioning_color_selector_titles" translatable="false" >
+        <item>@string/color_white</item>
+        <item>@string/color_black</item>
+        <item>@string/color_red</item>
+        <item>@string/color_yellow</item>
+        <item>@string/color_green</item>
+        <item>@string/color_cyan</item>
+        <item>@string/color_blue</item>
+        <item>@string/color_magenta</item>
+    </string-array>
+
+    <!-- Values for captioning color preference. -->
+    <integer-array name="captioning_color_selector_values" translatable="false" >
+        <item>0xFFFFFFFF</item>
+        <item>0xFF000000</item>
+        <item>0xFFFF0000</item>
+        <item>0xFFFFFF00</item>
+        <item>0xFF00FF00</item>
+        <item>0xFF00FFFF</item>
+        <item>0xFF0000FF</item>
+        <item>0xFFFF00FF</item>
+        <item>0xFF000055</item>
+        <item>0xFF0000AA</item>
+        <item>0xFF005500</item>
+        <item>0xFF005555</item>
+        <item>0xFF0055AA</item>
+        <item>0xFF0055FF</item>
+        <item>0xFF00AA00</item>
+        <item>0xFF00AA55</item>
+        <item>0xFF00AAAA</item>
+        <item>0xFF00AAFF</item>
+        <item>0xFF00FF55</item>
+        <item>0xFF00FFAA</item>
+        <item>0xFF550000</item>
+        <item>0xFF550055</item>
+        <item>0xFF5500AA</item>
+        <item>0xFF5500FF</item>
+        <item>0xFF555500</item>
+        <item>0xFF555555</item>
+        <item>0xFF5555AA</item>
+        <item>0xFF5555FF</item>
+        <item>0xFF55AA00</item>
+        <item>0xFF55AA55</item>
+        <item>0xFF55AAAA</item>
+        <item>0xFF55AAFF</item>
+        <item>0xFF55FF00</item>
+        <item>0xFF55FF55</item>
+        <item>0xFF55FFAA</item>
+        <item>0xFF55FFFF</item>
+        <item>0xFFAA0000</item>
+        <item>0xFFAA0055</item>
+        <item>0xFFAA00AA</item>
+        <item>0xFFAA00FF</item>
+        <item>0xFFAA5500</item>
+        <item>0xFFAA5555</item>
+        <item>0xFFAA55AA</item>
+        <item>0xFFAA55FF</item>
+        <item>0xFFAAAA00</item>
+        <item>0xFFAAAA55</item>
+        <item>0xFFAAAAAA</item>
+        <item>0xFFAAAAFF</item>
+        <item>0xFFAAFF00</item>
+        <item>0xFFAAFF55</item>
+        <item>0xFFAAFFAA</item>
+        <item>0xFFAAFFFF</item>
+        <item>0xFFFF0055</item>
+        <item>0xFFFF00AA</item>
+        <item>0xFFFF5500</item>
+        <item>0xFFFF5555</item>
+        <item>0xFFFF55AA</item>
+        <item>0xFFFF55FF</item>
+        <item>0xFFFFAA00</item>
+        <item>0xFFFFAA55</item>
+        <item>0xFFFFAAAA</item>
+        <item>0xFFFFAAFF</item>
+        <item>0xFFFFFF55</item>
+        <item>0xFFFFFFAA</item>
+    </integer-array>
+
+    <!-- Titles for captioning opacity preference. [CHAR LIMIT=35] -->
+    <string-array name="captioning_opacity_selector_titles" >
+        <item>25%</item>
+        <item>50%</item>
+        <item>75%</item>
+        <item>100%</item>
+    </string-array>
+
+    <!-- Values for captioning opacity preference. -->
+    <integer-array name="captioning_opacity_selector_values" translatable="false" >
+        <item>0x40FFFFFF</item>
+        <item>0x80FFFFFF</item>
+        <item>0xC0FFFFFF</item>
+        <item>0xFFFFFFFF</item>
+    </integer-array>
+
+    <!-- Titles for captioning text style preset preference. [CHAR LIMIT=35] -->
+    <string-array name="captioning_preset_selector_titles" >
+        <item>Белый на чёрном</item>
+        <item>Чёрный на белом</item>
+        <item>Жёлтый на чёрном</item>
+        <item>Жёлтый на синем</item>
+        <item>Другой</item>
+    </string-array>
+
+    <!-- Values for captioning text style preset preference. -->
+    <integer-array name="captioning_preset_selector_values" translatable="false" >
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>-1</item>
+    </integer-array>
+
+    <!-- Titles for runtime selection preference. [CHAR LIMIT=35] -->
+    <string-array name="select_runtime_titles">
+        <item>Dalvik</item>
+        <item>ART</item>
+        <item>ART (дебаг)</item>
+    </string-array>
+
+    <!-- Values for runtime selection preference. -->
+    <string-array name="select_runtime_values" translatable="false" >
+        <item>libdvm.so</item>
+        <item>libart.so</item>
+        <item>libartd.so</item>
+    </string-array>
+
+    <!-- Summaries for runtime selection preference. [CHAR LIMIT=100]-->
+    <string-array name="select_runtime_summaries" >
+        <item>Использовать Dalvik</item>
+        <item>Использовать ART</item>
+        <item>Использовать ART дебаг билд</item>
+    </string-array>
+
+    <!-- Titles for HDCP checking preference. [CHAR LIMIT=35] -->
     <string-array name="hdcp_checking_titles">
-        <item>"Никогда не проверять"</item>
-        <item>"Проверять только содержание DRM"</item>
-        <item>"Всегда проверять"</item>
+        <item>Никогда не проверять</item>
+        <item>Проверять только содержание DRM</item>
+        <item>Всегда проверять</item>
     </string-array>
 
     <!-- Values for HDCP checking preference. -->
@@ -581,20 +907,20 @@
 
     <!-- Summaries for HDCP checking preference. [CHAR LIMIT=100]-->
     <string-array name="hdcp_checking_summaries" >
-        <item>"Не использовать проверку HDCP"</item>
-        <item>"Использовать проверку HDCP только для содержания DRM"</item>
-        <item>"Всегда использовать проверку HDCP"</item>
+        <item>Не использовать проверку HDCP</item>
+        <item>Использовать проверку HDCP только для содержания DRM</item>
+        <item>Всегда использовать проверку HDCP</item>
     </string-array>
 
     <!-- Titles for window animation scale preference. [CHAR LIMIT=35] -->
   <string-array name="window_animation_scale_entries">
-    <item>"Без анимации"</item>
-    <item>"Анимация (масштаб: 0,5x)"</item>
-    <item>"Анимация (масштаб: 1x)"</item>
-    <item>"Анимация (масштаб: 1,5x)"</item>
-    <item>"Анимация (масштаб: 2x)"</item>
-    <item>"Анимация (масштаб: 5x)"</item>
-    <item>"Анимация (масштаб: 10x)"</item>
+    <item>Без анимации</item>
+    <item>Анимация (масштаб: 0,5x)</item>
+    <item>Анимация (масштаб: 1x)</item>
+    <item>Анимация (масштаб: 1,5x)</item>
+    <item>Анимация (масштаб: 2x)</item>
+    <item>Анимация (масштаб: 5x)</item>
+    <item>Анимация (масштаб: 10x)</item>
     </string-array>
 
     <!-- Values for window animation scale preference. -->
@@ -610,13 +936,13 @@
 
     <!-- Titles for transition animation scale preference. [CHAR LIMIT=35] -->
   <string-array name="transition_animation_scale_entries">
-    <item>"Без анимации"</item>
-    <item>"Анимация (масштаб: 0,5x)"</item>
-    <item>"Анимация (масштаб: 1x)"</item>
-    <item>"Анимация (масштаб: 1,5x)"</item>
-    <item>"Анимация (масштаб: 2x)"</item>
-    <item>"Анимация (масштаб: 5x)"</item>
-    <item>"Анимация (масштаб: 10x)"</item>
+    <item>Без анимации</item>
+    <item>Анимация (масштаб: 0,5x)</item>
+    <item>Анимация (масштаб: 1x)</item>
+    <item>Анимация (масштаб: 1,5x)</item>
+    <item>Анимация (масштаб: 2x)</item>
+    <item>Анимация (масштаб: 5x)</item>
+    <item>Анимация (масштаб: 10x)</item>
     </string-array>
 
     <!-- Values for transition animation scale preference. -->
@@ -632,13 +958,13 @@
 
     <!-- Titles for animator duration scale preference. [CHAR LIMIT=35] -->
   <string-array name="animator_duration_scale_entries">
-    <item>"Без анимации"</item>
-    <item>"Скорость 0,5x"</item>
-    <item>"Скорость 1x"</item>
-    <item>"Скорость 1,5x"</item>
-    <item>"Скорость 2x"</item>
-    <item>"Скорость 5x"</item>
-    <item>"Скорость 10x"</item>
+    <item>Без анимации</item>
+    <item>Скорость 0,5x</item>
+    <item>Скорость 1x</item>
+    <item>Скорость 1,5x</item>
+    <item>Скорость 2x</item>
+    <item>Скорость 5x</item>
+    <item>Скорость 10x</item>
     </string-array>
 
     <!-- Values for animator duration scale preference. -->
@@ -654,28 +980,34 @@
 
     <!-- Titles for overlay display devices preference. [CHAR LIMIT=35] -->
   <string-array name="overlay_display_devices_entries">
-    <item>"Нет данных"</item>
-    <item>"720 x 480 пикс. (mdpi)"</item>
-    <item>"1280 x 720 пикс. (tvdpi)"</item>
-    <item>"1920 x 1080 пикс. (xhdpi)"</item>
-    <item>"1280x720 (tvdpi)/1920x1080 (xhdpi)"</item>
+    <item>Нет данных</item>
+        <item>720x480 mdpi</item>
+        <item>720x480 mdpi (безопасный)</item>
+        <item>1280x720 tvdpi</item>
+        <item>1280x720 tvdpi (безопасный)</item>
+        <item>1920x1080 xhdpi</item>
+        <item>1920x1080 xhdpi (безопасный)</item>
+        <item>1280x720 tvdpi and 1920x1080 xhdpi</item>
     </string-array>
 
     <!-- Values for overlay display devices preference. -->
     <string-array name="overlay_display_devices_values" translatable="false" >
         <item></item>
         <item>720x480/160</item>
+        <item>720x480/160,безопасный</item>
         <item>1280x720/213</item>
+        <item>1280x720/213,безопасный</item>
         <item>1920x1080/320</item>
+        <item>1920x1080/320,безопасный</item>
         <item>1280x720/213;1920x1080/320</item>
     </string-array>
 
     <!-- Titles for OpenGL traces preference. [CHAR LIMIT=35] -->
   <string-array name="enable_opengl_traces_entries">
-    <item>"Нет данных"</item>
-    <item>"Logcat"</item>
-    <item>"Systrace (графика)"</item>
-    <item>"Список вызовов в glGetError"</item>
+    <item>Нет данных</item>
+    <item>Logcat</item>
+    <item>Systrace (графика)</item>
+    <item>Список вызовов в glGetError</item>
     </string-array>
 
     <!-- Values for OpenGL traces preference. -->
@@ -687,13 +1019,59 @@
     </string-array>
 
     <!-- Titles for app process limit preference. [CHAR LIMIT=35] -->
+    <string-array name="show_non_rect_clip_entries">
+        <item>Откл.</item>
+        <item>Непрямоугольное усечение синим</item>
+        <item>Тест. команды рисования зеленым</item>
+    </string-array>
+
+    <!-- Values for non-rectangular clipping preference. -->
+    <string-array name="show_non_rect_clip_values" translatable="false" >
+        <item>hide</item>
+        <item>region</item>
+        <item>highlight</item>
+    </string-array>
+
+    <!-- Titles for frame time tracking preference. [CHAR LIMIT=35] -->
+    <string-array name="track_frame_time_entries">
+        <item>Отключить</item>
+        <item>На экране в виде полос</item>
+        <item>На экране в виде линий</item>
+        <item>В adb shell dumpsys gfxinfo</item>
+    </string-array>
+
+    <!-- Values for frame time tracking preference. -->
+    <string-array name="track_frame_time_values" translatable="false" >
+        <item>false</item>
+        <item>visual_bars</item>
+        <item>visual_lines</item>
+        <item>true</item>
+    </string-array>
+
+    <!-- Titles for debug overdraw preference. [CHAR LIMIT=50] -->
+    <string-array name="debug_hw_overdraw_entries">
+        <item>Выкл.</item>
+        <item>Показывать области наложения</item>
+        <item>Выделять области определенного цвета</item>
+        <item>Показывать число объектов</item>
+    </string-array>
+
+    <!-- Values for debug overdraw preference. -->
+    <string-array name="debug_hw_overdraw_values" translatable="false" >
+        <item>false</item>
+        <item>show</item>
+        <item>show_deuteranomaly</item>
+        <item>count</item>
+    </string-array>
+
+    <!-- Titles for app process limit preference. [CHAR LIMIT=35] -->
   <string-array name="app_process_limit_entries">
-    <item>"Стандартное ограничение"</item>
-    <item>"Без фоновых процессов"</item>
-    <item>"Не более одного процесса"</item>
-    <item>"Не более 2 процессов"</item>
-    <item>"Не более 3 процессов"</item>
-    <item>"Не более 4 процессов"</item>
+    <item>Стандартное ограничение</item>
+    <item>Без фоновых процессов</item>
+    <item>Не более одного процесса</item>
+    <item>Не более 2 процессов</item>
+    <item>Не более 3 процессов</item>
+    <item>Не более 4 процессов</item>
     </string-array>
 
     <!-- Values for app process limit preference. -->
@@ -720,29 +1098,29 @@
     <!-- Match this with the constants in VpnProfile. --> <skip />
     <!-- Longer descriptions for each VPN type. [CHAR LIMIT=100] -->
   <string-array name="vpn_types_long">
-    <item>"VPN-соединение по протоколу PPTP"</item>
-    <item>"VPN-соединение по протоколу L2TP/IPSec с общими ключами"</item>
-    <item>"VPN-подключение по протоколу L2TP/IPSec с использованием сертификатов"</item>
-    <item>"VPN-подключение IPSec с общими ключами и аутентификацией Xauth"</item>
-    <item>"VPN-подключение IPSec с использованием сертификатов и аутентификации Xauth"</item>
-    <item>"VPN-подключение IPSec с использованием сертификатов и комбинированной аутентификации"</item>
+    <item>VPN-соединение по протоколу PPTP</item>
+    <item>VPN-соединение по протоколу L2TP/IPSec с общими ключами</item>
+    <item>VPN-подключение по протоколу L2TP/IPSec с использованием сертификатов</item>
+    <item>VPN-подключение IPSec с общими ключами и аутентификацией Xauth</item>
+    <item>VPN-подключение IPSec с использованием сертификатов и аутентификации Xauth</item>
+    <item>VPN-подключение IPSec с использованием сертификатов и комбинированной аутентификации</item>
     </string-array>
 
     <!-- Match this with the constants in LegacyVpnInfo. --> <skip />
     <!-- Status for a VPN network. [CHAR LIMIT=100] -->
   <string-array name="vpn_states">
         <!-- Status message when VPN is disconnected. -->
-    <item>"Отключена"</item>
+    <item>Отключена</item>
         <!-- Status message when VPN is initializing. -->
-    <item>"Инициализация\u2026"</item>
+    <item>Инициализация\u2026</item>
         <!-- Status message when VPN is connecting. -->
-    <item>"Подключение\u2026"</item>
+    <item>Подключение\u2026</item>
         <!-- Status message when VPN is connected. -->
-    <item>"Подключено"</item>
+    <item>Подключено</item>
         <!-- Status message when VPN is timeout. -->
-    <item>"Время ожидания истекло"</item>
+    <item>Время ожидания истекло</item>
         <!-- Status message when VPN is failed. -->
-    <item>"Сбой"</item>
+    <item>Сбой</item>
     </string-array>
 
     <!-- User content ratings for restricted users [CHAR LIMIT=30] -->
@@ -766,20 +1144,22 @@
     <!-- Values for premium SMS permission selector [CHAR LIMIT=30] -->
   <string-array name="security_settings_premium_sms_values">
         <!-- Ask user before sending to premium SMS short code. -->
-    <item>"Спрашивать"</item>
+    <item>Спрашивать</item>
         <!-- Never allow app to send to premium SMS short code. -->
-    <item>"Не разрешать"</item>
+    <item>Не разрешать</item>
         <!-- Always allow app to send to premium SMS short code. -->
-    <item>"Разрешать всегда"</item>
+    <item>Разрешать всегда</item>
     </string-array>
 
-    <!--<string-array name="entries_halo_state">
-        <item>@string/halo_state_black</item>
-        <item>@string/halo_state_white</item>
-    </string-array>
 
-    <string-array name="values_halo_state" translatable="false">
-        <item>1</item>
-        <item>0</item>
-    </string-array>-->
+    <string-array name="ram_states">
+        <!-- Normal desired memory state. -->
+        <item>нормальный</item>
+        <!-- Moderate memory state, not as good as normal. -->
+        <item>умеренный</item>
+        <!-- Memory is running low. -->
+        <item>низкий</item>
+        <!-- Memory is critical. -->
+        <item>критический</item>
+    </string-array>
 </resources>
