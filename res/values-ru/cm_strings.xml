@@ -857,4 +857,25 @@
     <string name="app_ops_categories_media">Мультимедиа</string>
     <string name="app_ops_categories_messaging">Сообщения</string>
     <string name="app_ops_categories_personal">Личные данные</string>
+
+     <!-- SGT7 -->
+    <string name="pref_disable_bootanimation_title">Отключить анимацию при загрузке</string>
+    <string name="pref_disable_wallpaperservice_title">Отключить службу обоев</string>
+    <string name="pref_disable_wallpaperservice_summary">Отключить службу обоев для уменьшения памяти, используемой SystemUI (требуется перезагрузка)</string>
+
+    <string name="pref_is_high_end_gfx_title">Включить хай-энд графику</string>
+    <string name="pref_is_high_end_gfx_summary">Включение функции аппаратного ускорения прозрачности (требуется перезагрузка)</string>
+
+    <string name="user_interface_title">Интерфейс пользователя</string>
+    <string name="dual_pane_prefs_title">Двухпанельные настройки</string>
+    <string name="dual_pane_prefs_summary">Выберите при использовании двухпанельного режима</string>
+    <string name="dual_pane_prefs_on">Всегда</string>
+    <string name="dual_pane_prefs_off">Никогда</string>
+    <string name="dual_pane_prefs_landscape">Только в ландшафте</string>
+    <string name="status_bar_notification_color_title">Цвет панели уведомлений</string>
+    <string name="recents_panel_color_title">Цвет панели недавних приложений</string>
+    <string name="tile_color_title">Цвет заголовка</string>
+    <string name="large_recent_thumbs_title">Большие иконки недавних приложений</string>
+    <string name="large_recent_thumbs_summary">Показать большие иконки недавно запущенных приложений</string>
+    <string name="dialog_indicator_color_title">Выберите цвет</string>
 </resources>
