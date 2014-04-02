@@ -771,7 +771,7 @@
         <item>3</item>
     </string-array>
 
-    <!-- Network Traffic Display Unit -->
+    <!-- Network Traffic Display Unit 
     <string-array name="show_network_traffic_unit_entries" translatable="false">
         <item>@string/show_network_traffic_bit</item>
         <item>@string/show_network_traffic_byte</item>
@@ -795,6 +795,6 @@
         <item>1000</item>
         <item>1500</item>
         <item>2000</item>
-    </string-array>
+    </string-array> -->
 
 </resources>
