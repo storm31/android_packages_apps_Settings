@@ -92,9 +92,8 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         enableStatusBarBatteryDependents(mStatusBarBattery.getValue());
         
         mStatusBarTraffic = (CheckBoxPreference) prefSet.findPreference(STATUS_BAR_TRAFFIC);
-        int intState = Settings.System.getInt(resolver, Settings.System.STATUS_BAR_TRAFFIC, 0);
-        intState = setStatusBarTrafficSummary(intState);
-        mStatusBarTraffic.setChecked(intState > 0);
+        mStatusBarTraffic.setChecked(Settings.System.getInt(resolver,
+            Settings.System.STATUS_BAR_TRAFFIC, 0) == 1);
         mStatusBarTraffic.setOnPreferenceChangeListener(this);
     }
 
@@ -116,12 +115,9 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             mStatusBarCmSignal.setSummary(mStatusBarCmSignal.getEntries()[index]);
             return true;
         } else if (preference == mStatusBarTraffic) {
-            // Increment the state and then update the label
-            int intState = Settings.System.getInt(resolver, Settings.System.STATUS_BAR_TRAFFIC, 0);
-            intState++;
-            intState = setStatusBarTrafficSummary(intState);
-            Settings.System.putInt(resolver, Settings.System.STATUS_BAR_TRAFFIC, intState);
-            if (intState > 1) {return false;}
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(resolver,
+                Settings.System.STATUS_BAR_TRAFFIC, value ? 1 : 0);
             return true;
         }
 
@@ -132,18 +128,5 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         boolean enabled = !(value.equals(STATUS_BAR_STYLE_TEXT)
                 || value.equals(STATUS_BAR_STYLE_HIDDEN));
         mStatusBarBatteryShowPercent.setEnabled(enabled);
-    }
-    
-    private int setStatusBarTrafficSummary(int intState) {
-        // These states must match com.android.systemui.statusbar.policy.Traffic
-        if (intState == 1) {
-            mStatusBarTraffic.setSummary(R.string.show_network_speed_bits);
-        } else if (intState == 2) {
-            mStatusBarTraffic.setSummary(R.string.show_network_speed_bytes);
-        } else {
-            mStatusBarTraffic.setSummary(R.string.show_network_speed_summary);
-            return 0;
-        }
-        return intState;
     }
 }
