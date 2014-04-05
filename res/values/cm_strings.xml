@@ -26,6 +26,15 @@
     <!-- Wi-Fi settings screen, setting summary for setting the Wi-Fi priority-->
     <string name="wifi_setting_priority_summary">Specify the priority of the Wi-Fi networks</string>
 
+    <!--  Title for PreferenceScreen to change encryption password [CHAR LIMIT=22]  -->
+    <string name="change_crypt_password_title">Change password</string>
+
+    <!--  Summary for PreferenceScreen to change encryption password [CHAR LIMIT=45]  -->
+    <string name="change_crypt_password_summary">Change the password used for device encryption</string>
+
+    <!-- Header on first screen of choose encryption password [CHAR LIMIT=30] -->
+    <string name="encryptionpassword_choose_your_password_header">Set encryption password</string>
+
     <string name="lock_screen_title">Lock screen</string>
 
     <string name="increasing_ring_title">Ascending ringtone</string>
@@ -1145,6 +1154,12 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="wifi_channel">Channel</string>
     <string name="wifi_mhz">MHz</string>
 
+    <!-- Voice Wakeup -->
+    <string name="voice_wakeup_settings_title">Voice wakeup</string>
+    <string name="voice_wakeup_retrain_title">Retrain your voice</string>
+    <string name="voice_wakeup_activity_title">Activity to launch</string>
+    <string name="voice_wakeup_default_activity">Google Now</string>
+
     <!-- SGT7 -->
     <string name="pref_disable_bootanimation_title">Disable boot animation</string>
     <string name="pref_disable_wallpaperservice_title">Disable wallpaper service</string>
@@ -1165,4 +1180,5 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="large_recent_thumbs_title">Large recent thumbnails</string>
     <string name="large_recent_thumbs_summary">Show larger recent application thumbnails</string>
     <string name="dialog_indicator_color_title">Select color</string>
+
 </resources>
