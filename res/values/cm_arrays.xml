@@ -753,7 +753,7 @@
         <item>0</item>
         <item>1</item>
     </string-array>
-    
+
     <!-- Dual Pane Prefs -->
     <string-array name="entries_dual_pane_prefs" translatable="false">
         <item>@string/dual_pane_prefs_off</item>
@@ -766,5 +766,4 @@
         <item>1</item>
         <item>2</item>
     </string-array>
-
 </resources>
