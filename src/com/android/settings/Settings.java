@@ -80,7 +80,6 @@ import com.android.settings.bluetooth.BluetoothEnabler;
 import com.android.settings.bluetooth.BluetoothSettings;
 import com.android.settings.cyanogenmod.ButtonSettings;
 import com.android.settings.cyanogenmod.LockscreenInterface;
-import com.android.settings.cyanogenmod.MoreDeviceSettings;
 import com.android.settings.cyanogenmod.PerformanceSettings;
 import com.android.settings.cyanogenmod.StatusBar;
 import com.android.settings.cyanogenmod.NotificationDrawer;
@@ -385,7 +384,6 @@ public class Settings extends PreferenceActivity
         StatusBar.class.getName(),
         NotificationDrawer.class.getName(),
         ButtonSettings.class.getName(),
-        MoreDeviceSettings.class.getName(),
         ProfilesSettings.class.getName(),
         PerformanceSettings.class.getName(),
         PolicyNativeFragment.class.getName(),
@@ -685,10 +683,6 @@ public class Settings extends PreferenceActivity
                     target.remove(header);
             } else if (id == R.id.voice_wakeup_settings) {
                 if(!Utils.isPackageInstalled(this, VOICE_WAKEUP_PACKAGE_NAME)) {
-                    target.remove(header);
-                }
-            } else if (id == R.id.more_device_settings) {
-                if (!MoreDeviceSettings.hasItems()) {
                     target.remove(header);
                 }
             }
