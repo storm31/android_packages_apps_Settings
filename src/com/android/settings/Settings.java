@@ -40,12 +40,9 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.nfc.NfcAdapter;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.INetworkManagementService;
 import android.os.RemoteException;
-import android.os.ResultReceiver;
 import android.os.ServiceManager;
 import android.os.UserHandle;
 import android.os.UserManager;
@@ -78,6 +75,8 @@ import com.android.internal.util.ArrayUtils;
 import com.android.settings.accessibility.AccessibilitySettings;
 import com.android.settings.accessibility.CaptionPropertiesFragment;
 import com.android.settings.accessibility.ToggleAccessibilityServicePreferenceFragment;
+import com.android.settings.accessibility.ToggleGlobalGesturePreferenceFragment;
+import com.android.settings.accessibility.ToggleScreenMagnificationPreferenceFragment;
 import com.android.settings.accounts.AccountSyncSettings;
 import com.android.settings.accounts.AuthenticatorHelper;
 import com.android.settings.accounts.ManageAccountsSettings;
@@ -112,6 +111,7 @@ import com.android.settings.nfc.PaymentSettings;
 import com.android.settings.print.PrintJobSettingsFragment;
 import com.android.settings.print.PrintServiceSettingsFragment;
 import com.android.settings.print.PrintSettingsFragment;
+import com.android.settings.privacyguard.PrivacyGuardPrefs;
 import com.android.settings.profiles.AppGroupConfig;
 import com.android.settings.profiles.ProfileConfig;
 import com.android.settings.profiles.ProfileEnabler;
@@ -178,7 +178,6 @@ public class Settings extends PreferenceActivity
     private Header mCurrentHeader;
     private Header mParentHeader;
     private boolean mInLocalHeaderSwitch;
-    private SettingsSearchFilterAdapter mSearchAdapter;
 
     // Show only these settings for restricted users
     private int[] SETTINGS_FOR_RESTRICTED = {
@@ -273,8 +272,6 @@ public class Settings extends PreferenceActivity
             }
         });
 
-        new PopulateSearchSettingsTask().execute();
-
         ActionBar.LayoutParams layoutParams = new ActionBar.LayoutParams(
                 ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.MATCH_PARENT);
 
@@ -283,35 +280,10 @@ public class Settings extends PreferenceActivity
         mSearchBar.setThreshold(1);
         mSearchBar.setSingleLine(true);
         mSearchBar.setOnItemClickListener(this);
+        mSearchBar.setAdapter(new SettingsSearchFilterAdapter(this));
 
         mSearchItem.setVisible(!mDisableSearchIcon);
         return true;
-    }
-
-    private class PopulateSearchSettingsTask extends
-            AsyncTask<Void, Void, ArrayList<SearchInfo>> {
-        @Override
-        protected ArrayList<SearchInfo> doInBackground(Void... param) {
-            return SearchPopulator.loadSearchData(Settings.this);
-        }
-
-        @Override
-        protected void onPostExecute(ArrayList<SearchInfo> infos) {
-            mSearchAdapter = new SettingsSearchFilterAdapter(Settings.this,
-                    R.layout.settings_search_complete_view, infos);
-            mSearchBar.setAdapter(mSearchAdapter);
-        }
-    };
-
-    private class SearchNotifier extends ResultReceiver {
-        public SearchNotifier(Handler handler) {
-            super(handler);
-        }
-
-        @Override
-        protected void onReceiveResult(int resultCode, Bundle resultData) {
-            new PopulateSearchSettingsTask().execute();
-        }
     }
 
     @Override
@@ -320,11 +292,9 @@ public class Settings extends PreferenceActivity
             getWindow().setUiOptions(getIntent().getIntExtra(EXTRA_UI_OPTIONS, 0));
         }
 
-        if (getIntent().hasExtra(EXTRA_DISABLE_SEARCH)) {
+        if (getIntent().hasExtra(EXTRA_DISABLE_SEARCH) != onIsMultiPane()) {
             mDisableSearchIcon = getIntent().getBooleanExtra(EXTRA_DISABLE_SEARCH, false);
         }
-
-        startPopulatingSearchData();
 
         mAuthenticatorHelper = new AuthenticatorHelper();
         mAuthenticatorHelper.updateAuthDescriptions(this);
@@ -601,12 +571,6 @@ public class Settings extends PreferenceActivity
         }
     }
 
-    private void startPopulatingSearchData() {
-        Intent i = new Intent(this, SearchPopulator.class);
-        i.putExtra(SearchPopulator.EXTRA_NOTIFIER, new SearchNotifier(new Handler()));
-        startService(i);
-    }
-
     @Override
     public Intent getIntent() {
         Intent superIntent = super.getIntent();
@@ -716,6 +680,11 @@ public class Settings extends PreferenceActivity
                 NavBar.class.getName().equals(fragmentName) ||
                 NavRing.class.getName().equals(fragmentName) ||
                 PaymentSettings.class.getName().equals(fragmentName) ||
+                CaptionPropertiesFragment.class.getName().equals(fragmentName) ||
+                ToggleScreenMagnificationPreferenceFragment.class.getName().equals(fragmentName) ||
+                ToggleGlobalGesturePreferenceFragment.class.getName().equals(fragmentName) ||
+                PrivacyGuardPrefs.class.getName().equals(fragmentName) ||
+                DevelopmentSettings.class.getName().equals(fragmentName) ||
                 WifiDisplaySettings.class.getName().equals(fragmentName)) {
             // Should force disable search options
             intent.putExtra(EXTRA_DISABLE_SEARCH, true);
