@@ -1885,6 +1885,8 @@
 
         <activity android:name=".cyanogenmod.NotificationDrawer" />
 
+		<activity android:name=".cyanogenmod.SpamList" />
+        
         <activity android:name=".cyanogenmod.MoreDeviceSettings" />
 
          <!-- "Blacklist settings" UI, used only on voice-capable phone devices. -->
