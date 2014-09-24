@@ -33,6 +33,7 @@ import com.android.settings.Utils;
 public class UserInterface extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
     private static final String DUAL_PANE_PREFS = "dual_pane_prefs";
+    private static final String LARGE_RECENT_THUMBS = "large_recent_thumbs";
 
     private ListPreference mDualPanePrefs;
     private CheckBoxPreference mLargeRecentThumbs;
@@ -58,6 +59,14 @@ public class UserInterface extends SettingsPreferenceFragment implements OnPrefe
         int dualPane = Settings.System.getInt(mContentResolver,
                 Settings.System.DUAL_PANE_PREFS, preferMultiPane ? 1 : 0);
         mDualPanePrefs.setValue(String.valueOf(dualPane));
+
+        mLargeRecentThumbs = (CheckBoxPreference) prefSet.findPreference(LARGE_RECENT_THUMBS);
+
+        mLargeRecentThumbs.setChecked((Settings.System.getInt(mContentResolver,
+                Settings.System.LARGE_RECENT_THUMBS, 0) == 1));
+
+        mRecentsColor =
+                (Preference) prefSet.findPreference("recents_panel_color");
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -74,8 +83,29 @@ public class UserInterface extends SettingsPreferenceFragment implements OnPrefe
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         boolean value;
 
-        
+        if (preference == mLargeRecentThumbs) {
+            value = mLargeRecentThumbs.isChecked();
+            Settings.System.putInt(mContentResolver,
+                    Settings.System.LARGE_RECENT_THUMBS, value ? 1 : 0);
+            return true;
+        } else if (preference == mRecentsColor) {
+            ColorPickerDialog cp = new ColorPickerDialog(getActivity(),
+                    mRecentsColorListener, Settings.System.getInt(mContentResolver,
+                    Settings.System.RECENTS_PANEL_COLOR, 0xe0000000));
+            cp.setDefaultColor(0xe0000000);
+            cp.show();
+            return true;
+        }
         return false;
     }
 
+    ColorPickerDialog.OnColorChangedListener mRecentsColorListener =
+        new ColorPickerDialog.OnColorChangedListener() {
+            public void colorChanged(int color) {
+                Settings.System.putInt(mContentResolver,
+                        Settings.System.RECENTS_PANEL_COLOR, color);
+            }
+            public void colorUpdate(int color) {
+            }
+    };
 }
