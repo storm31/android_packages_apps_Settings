@@ -433,6 +433,7 @@ Des options supplémentaires sont disponibles en appuyant longtemps sur une lign
   <string name="contributor_cloud_title">Contributeurs</string>
   <string name="cmupdate_settings_title">Mises à jour CyanogenMod</string>
   <string name="cmupdate_settings_summary">Vérifier, afficher ou installer les mises à jour disponibles</string>
+  <string name="advanced_settings_title">Paramètres avancés</string>
   <string name="development_tools_title">Outils de développement</string>
   <string name="allow_mock_sms">Permettre les SMS simulés</string>
   <string name="privacy_settings_cyanogenmod_title">Confidentialité</string>

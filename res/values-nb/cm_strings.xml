@@ -424,6 +424,7 @@
   <string name="contributor_cloud_title">Bidragsytere</string>
   <string name="cmupdate_settings_title">CyanogenMod oppdateringer</string>
   <string name="cmupdate_settings_summary">Se etter, vise eller installerer tilgjengelige oppdateringer</string>
+  <string name="advanced_settings_title">Avansert</string>
   <string name="development_tools_title">Start verktøy</string>
   <string name="allow_mock_sms">Tillat simulert SMS</string>
   <string name="privacy_settings_cyanogenmod_title">Personvern</string>

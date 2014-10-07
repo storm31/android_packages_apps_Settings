@@ -447,6 +447,7 @@ Mittels \"Entfernen\" kann die ausgewählte Stützstelle aus dem Helligkeitsverl
   <string name="contributor_cloud_title">Mitwirkende</string>
   <string name="cmupdate_settings_title">CyanogenMod-Updates</string>
   <string name="cmupdate_settings_summary">Auf neue Versionen prüfen und diese installieren</string>
+  <string name="advanced_settings_title">Erweitert</string>
   <string name="development_tools_title">Entwickler-Werkzeuge</string>
   <string name="allow_mock_sms">Simulierte SMS zulassen</string>
   <string name="privacy_settings_cyanogenmod_title">Datenschutz</string>

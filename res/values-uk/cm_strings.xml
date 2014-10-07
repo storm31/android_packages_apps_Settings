@@ -431,6 +431,7 @@
   <string name="contributor_cloud_title">Учасники</string>
   <string name="cmupdate_settings_title">Оновлення CyanogenMod</string>
   <string name="cmupdate_settings_summary">Перевірка та встановлення доступних оновлень</string>
+  <string name="advanced_settings_title">Додаткові</string>
   <string name="development_tools_title">Запуск утиліти розробника</string>
   <string name="allow_mock_sms">Фіктивні SMS</string>
   <string name="privacy_settings_cyanogenmod_title">Приватність</string>

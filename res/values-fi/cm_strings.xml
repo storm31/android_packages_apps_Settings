@@ -433,6 +433,7 @@ Lisää asetuksia on saaavilla painamalla riviä pitkään. Valitsemalla \'Muokk
   <string name="contributor_cloud_title">Kehittäjät ja avustajat</string>
   <string name="cmupdate_settings_title">CyanogenMod-päivitykset</string>
   <string name="cmupdate_settings_summary">Tarkista, näytä tai asenna saatavilla olevat päivitykset</string>
+  <string name="advanced_settings_title">Lisäasetukset</string>
   <string name="development_tools_title">Käynnistä kehitystyökalut</string>
   <string name="allow_mock_sms">Salli valetekstiviestit</string>
   <string name="privacy_settings_cyanogenmod_title">Yksityisyys</string>

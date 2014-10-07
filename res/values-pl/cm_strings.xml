@@ -432,6 +432,7 @@ Dodatkowe opcje są dostępne przez długie przytrzymanie linii. Wybierając opc
   <string name="contributor_cloud_title">Twórcy</string>
   <string name="cmupdate_settings_title">Aktualizacje CyanogenMod</string>
   <string name="cmupdate_settings_summary">Znajdź i zainstaluj dostępne aktualizacje</string>
+  <string name="advanced_settings_title">Zaawansowane</string>
   <string name="development_tools_title">Narzędzia uruchamiania</string>
   <string name="allow_mock_sms">Pozorowane SMS-y</string>
   <string name="privacy_settings_cyanogenmod_title">Prywatność</string>

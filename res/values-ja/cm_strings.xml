@@ -441,6 +441,7 @@
   <string name="contributor_cloud_title">貢献者</string>
   <string name="cmupdate_settings_title">CyanogenModアップデート</string>
   <string name="cmupdate_settings_summary">利用可能なアップデートを確認、表示、インストールする</string>
+  <string name="advanced_settings_title">詳細設定</string>
   <string name="development_tools_title">ツールを起動</string>
   <string name="allow_mock_sms">疑似SMSを許可</string>
   <string name="privacy_settings_cyanogenmod_title">プライバシー</string>

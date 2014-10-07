@@ -441,6 +441,7 @@ jednotlivě měnit a tím zvětšit počet řídících bodů. „Odstranit“ s
   <string name="contributor_cloud_title">Přispěvatelé</string>
   <string name="cmupdate_settings_title">Aktualizace CyanogenMod</string>
   <string name="cmupdate_settings_summary">Zjištění dostupnosti nové aktualizace</string>
+  <string name="advanced_settings_title">Rozšířené</string>
   <string name="development_tools_title">Spustit vývojové nástroje</string>
   <string name="allow_mock_sms">Povolit falešné SMS</string>
   <string name="privacy_settings_cyanogenmod_title">Soukromí</string>

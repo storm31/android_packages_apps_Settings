@@ -435,6 +435,7 @@ ten einde om bykomende kontrolepunte by te voeg . \'Verwyder\' verwyder die geko
   <string name="contributor_cloud_title">Bydraers</string>
   <string name="cmupdate_settings_title">CyanogenMod opgradering</string>
   <string name="cmupdate_settings_summary">Soek vir of installeer beskikbare opgraderings</string>
+  <string name="advanced_settings_title">Gevorderd</string>
   <string name="development_tools_title">Gereedskap</string>
   <string name="allow_mock_sms">Laat skyn SMS toe</string>
   <string name="privacy_settings_cyanogenmod_title">Privaatheid</string>

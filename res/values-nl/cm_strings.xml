@@ -432,6 +432,7 @@ Extra opties zijn beschikbaar door een regel lang aan te raken. Door \'Aanpassen
   <string name="contributor_cloud_title">Bijdragers</string>
   <string name="cmupdate_settings_title">CyanogenMod-updates</string>
   <string name="cmupdate_settings_summary">Controleren op updates</string>
+  <string name="advanced_settings_title">Geavanceerd</string>
   <string name="development_tools_title">Tools openen</string>
   <string name="allow_mock_sms">Nep-sms toestaan</string>
   <string name="privacy_settings_cyanogenmod_title">Privacy</string>
