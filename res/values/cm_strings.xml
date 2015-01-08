@@ -1452,6 +1452,8 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="profile_setup_setup_triggers_description">Please select triggers which will activate this profile</string>
     <string name="profile_setup_actions_description">Now configure what happens when the profile is activated</string>
 
+    <string name="sound_ringtone_multisim_options">Change default ringtones</string>
+
     <!-- SGT7 -->
     <string name="pref_disable_bootanimation_title">Disable boot animation</string>
     <string name="pref_disable_wallpaperservice_title">Disable wallpaper service</string>
