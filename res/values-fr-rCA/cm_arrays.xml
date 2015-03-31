@@ -17,60 +17,60 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string-array name="wifi_countrycode_entries">
-    <item>Estats Units</item>
-    <item>Canadà, Taiwan</item>
-    <item>Alemanya</item>
-    <item>Europa</item>
-    <item>Japó, Rússia</item>
-    <item>Austràlia</item>
-    <item>Xina</item>
-    <item>Corea</item>
-    <item>Turquia</item>
-    <item>Singapur</item>
-    <item>Brasil</item>
-    <item>Índia</item>
+    <item>États-Unis</item>
+    <item>Canada, Taïwan</item>
+    <item>Allemagne</item>
+    <item>Europe</item>
+    <item>Japon, Russie</item>
+    <item>Australie</item>
+    <item>Chine</item>
+    <item>Corée</item>
+    <item>Turquie</item>
+    <item>Singapour</item>
+    <item>Brésil</item>
+    <item>Inde</item>
   </string-array>
   <string-array name="profile_entries">
-    <item>Sí</item>
-    <item>No</item>
-    <item>No anul·lis</item>
+    <item>Activer</item>
+    <item>Désactiver</item>
+    <item>Ne pas outrepasser</item>
   </string-array>
   <string-array name="profile_connection_entries">
-    <item>Desactiva</item>
-    <item>Activa</item>
+    <item>Désactiver</item>
+    <item>Activer</item>
   </string-array>
   <string-array name="entries_screentimeout_widget">
-    <item>15s | 1m | 5m</item>
-    <item>30s | 2m | 5m</item>
+    <item>15 s | 1 m | 5 m</item>
+    <item>30 s | 2 m | 5 m</item>
   </string-array>
   <string-array name="data_usage_cycle_length">
-    <item>Diàriament</item>
-    <item>Setmanalment</item>
-    <item>Mensualment</item>
+    <item>Quotidienne</item>
+    <item>Hebdomadaire</item>
+    <item>Mensuelle</item>
   </string-array>
   <string-array name="data_usage_cycle_weekdays">
-    <item>Diumenge</item>
-    <item>Dilluns</item>
-    <item>Dimarts</item>
-    <item>Dimecres</item>
-    <item>Dijous</item>
-    <item>Divendres</item>
-    <item>Dissabte</item>
+    <item>Dimanche</item>
+    <item>Lundi</item>
+    <item>Mardi</item>
+    <item>Mercredi</item>
+    <item>Jeudi</item>
+    <item>Vendredi</item>
+    <item>Samedi</item>
   </string-array>
   <string-array name="app_ops_permissions">
-    <item>Permès</item>
-    <item>Denegat</item>
-    <item>Pregunta sempre</item>
+    <item>Autorisé</item>
+    <item>Refusé</item>
+    <item>Toujours demander</item>
   </string-array>
   <string-array name="qs_quick_access_size_entries">
-    <item>Automàtic</item>
-    <item>Automàtic (estret)</item>
-    <item>Gran</item>
-    <item>Estret</item>
+    <item>Automatique</item>
+    <item>Automatique (petit)</item>
+    <item>Grand</item>
+    <item>Petit</item>
   </string-array>
   <string-array name="screen_color_setting">
-    <item>Estàndard</item>
-    <item>Viva</item>
-    <item>Personalitzat</item>
+    <item>Standard</item>
+    <item>Vif</item>
+    <item>Personnalisé</item>
   </string-array>
 </resources>
